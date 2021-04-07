@@ -31,4 +31,14 @@ d$cNH3 <- 14.0067*m.NH3
 # Equilibrium NH3 (g) (g/m3)
 d$cNH3.g <- 14.0067*cg.NH3
 
+# Base on mean pH
+m.NH3 <- g.NH4*m.tan/(k.NH4*10^(-d$pH.mean) + g.NH4)
+cg.NH3 <- m.NH3/h.NH3
+
+# Free NH3 (g/kgw)
+d$cNH3.mpH <- 14.0067*m.NH3
+
+# Equilibrium NH3 (g) (g/m3)
+d$cNH3.g.mpH <- 14.0067*cg.NH3
+
 
